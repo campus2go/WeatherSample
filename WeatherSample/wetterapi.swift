@@ -84,11 +84,17 @@ class wetterapi :  NSObject, NSXMLParserDelegate{
         let weatherObj = RealWeather()
         
         
-        weatherObj.placeName = String(myort)
-        weatherObj.temperature = Float(temperatur as String)
         
-        print(myort)
-        print(temperatur)
+        weatherObj.placeName = String(myort)
+        //tempartur kann nicht kovertiert werden
+        weatherObj.temperature = temperatur.floatValue
+        
+            
+            
+       
+            
+        print(weatherObj.placeName)
+        print(weatherObj.temperature)
         
         return weatherObj
     }

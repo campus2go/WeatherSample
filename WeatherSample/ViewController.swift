@@ -31,10 +31,9 @@ class ViewController: UIViewController, WeatherReceiver {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        myWeatherProvider = DummyWeatherProvider()
+        myWeatherProvider = RealWeatherProvider()
         myWeatherIconProvider = DummyWeatherIconProvider()
-        let myweatherapi = wetterapi()
-        weather = myweatherapi.getWeather()
+        
         
     }
     
@@ -49,8 +48,7 @@ class ViewController: UIViewController, WeatherReceiver {
             myWeatherProvider!.requestWeather(self)
         }
         
-        let myweatherapi = wetterapi()
-        weather = myweatherapi.getWeather()
+        
         
         editLocation()
         editImage()
@@ -63,6 +61,7 @@ class ViewController: UIViewController, WeatherReceiver {
     func editLocation() {
         let nf = NSNumberFormatter()
         var wieWarmEsIst : String
+        
         if let w = weather {
             
         

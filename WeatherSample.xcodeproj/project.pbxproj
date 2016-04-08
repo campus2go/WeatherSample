@@ -51,6 +51,7 @@
 		B34134891CB7DC71003A2329 /* wetterapi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34134881CB7DC71003A2329 /* wetterapi.swift */; };
 		B341348D1CB7E929003A2329 /* RealWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B341348C1CB7E929003A2329 /* RealWeather.swift */; };
 		B34134901CB7EEA8003A2329 /* PlzStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B341348F1CB7EEA8003A2329 /* PlzStorage.swift */; };
+		B34134921CB7FABD003A2329 /* RealWeatherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34134911CB7FABD003A2329 /* RealWeatherProvider.swift */; };
 		B3C6FFC61CB55CC1004ADF41 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C6FFC51CB55CC1004ADF41 /* SettingsController.swift */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +123,7 @@
 		B34134881CB7DC71003A2329 /* wetterapi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wetterapi.swift; sourceTree = "<group>"; };
 		B341348C1CB7E929003A2329 /* RealWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealWeather.swift; sourceTree = "<group>"; };
 		B341348F1CB7EEA8003A2329 /* PlzStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlzStorage.swift; sourceTree = "<group>"; };
+		B34134911CB7FABD003A2329 /* RealWeatherProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealWeatherProvider.swift; sourceTree = "<group>"; };
 		B3C6FFC51CB55CC1004ADF41 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -283,6 +285,7 @@
 		B341348E1CB7ECCF003A2329 /* RealWeatherProvider */ = {
 			isa = PBXGroup;
 			children = (
+				B34134911CB7FABD003A2329 /* RealWeatherProvider.swift */,
 			);
 			name = RealWeatherProvider;
 			path = ..;
@@ -443,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B34134921CB7FABD003A2329 /* RealWeatherProvider.swift in Sources */,
 				46A970BB1CB547650037C0D9 /* TemperatureConverter.swift in Sources */,
 				B3C6FFC61CB55CC1004ADF41 /* SettingsController.swift in Sources */,
 				46A970B61CB547320037C0D9 /* WeatherIconProvider.swift in Sources */,
