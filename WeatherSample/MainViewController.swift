@@ -17,14 +17,19 @@ class MainViewController: UIViewController, WeatherReceiver {
     @IBOutlet var buttonSettings: UIButton?
     
     //Provider + Objekte
-    let weatherProvider: DummyWeatherProvider = DummyWeatherProvider()
-    let iconProvider: DummyWeatherIconProvider = DummyWeatherIconProvider()
+    let weatherProvider: WeatherProvider = DummyWeatherProvider()
+    let iconProvider: WeatherIconProvider = DummyWeatherIconProvider()
     var weather: Weather?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        weatherProvider.requestWeather(self)
+        if weatherProvider.hasWeather && weatherProvider.istWeatherCurrent {
+            weather = weatherProvider.weather
+        }else{
+            weatherProvider.requestWeather(self)
+        }
+        
         
         labelTemperatur?.text = "\(labelTemperatur!.text!):"
     }

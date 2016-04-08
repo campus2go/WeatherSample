@@ -47,6 +47,7 @@
 		46A970F41CB5477A0037C0D9 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46A970D71CB5477A0037C0D9 /* settings@2x.png */; };
 		46A970F51CB5477A0037C0D9 /* settings@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46A970D81CB5477A0037C0D9 /* settings@3x.png */; };
 		F40DF4181CB7BC340019BD98 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DF4171CB7BC340019BD98 /* SettingsViewController.swift */; };
+		F40DF41F1CB7E1280019BD98 /* SimpleWeatherIconProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DF41E1CB7E1280019BD98 /* SimpleWeatherIconProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		46A970D71CB5477A0037C0D9 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		46A970D81CB5477A0037C0D9 /* settings@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@3x.png"; sourceTree = "<group>"; };
 		F40DF4171CB7BC340019BD98 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F40DF41E1CB7E1280019BD98 /* SimpleWeatherIconProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleWeatherIconProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 		46A970A61CB546B00037C0D9 /* DummyWeatherProvider */ = {
 			isa = PBXGroup;
 			children = (
+				F40DF41E1CB7E1280019BD98 /* SimpleWeatherIconProvider.swift */,
 				46A970A71CB546E10037C0D9 /* DummyWeather.swift */,
 				46A970A81CB546E10037C0D9 /* DummyWeatherIconProvider.swift */,
 				46A970A91CB546E10037C0D9 /* DummyWeatherProvider.swift */,
@@ -411,6 +414,7 @@
 			files = (
 				46A970BB1CB547650037C0D9 /* TemperatureConverter.swift in Sources */,
 				46A970B61CB547320037C0D9 /* WeatherIconProvider.swift in Sources */,
+				F40DF41F1CB7E1280019BD98 /* SimpleWeatherIconProvider.swift in Sources */,
 				46A970B81CB547320037C0D9 /* WeatherReceiver.swift in Sources */,
 				46A9707A1CB5439F0037C0D9 /* MainViewController.swift in Sources */,
 				46A970AB1CB546E10037C0D9 /* DummyWeatherIconProvider.swift in Sources */,

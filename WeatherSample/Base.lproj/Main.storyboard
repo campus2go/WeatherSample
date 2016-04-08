@@ -91,6 +91,9 @@
                             <constraint firstItem="Hch-US-pUj" firstAttribute="centerX" secondItem="8y4-53-RjX" secondAttribute="centerX" id="FGk-2t-GqO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="segmentControl" destination="Hch-US-pUj" id="T7Y-Yr-7t4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6B-Ya-gaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

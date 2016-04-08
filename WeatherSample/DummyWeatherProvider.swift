@@ -11,7 +11,7 @@ import Foundation
 class DummyWeatherProvider : WeatherProvider {
 	
 	
-	var hasWeather : Bool = true
+	var hasWeather : Bool = false
 	
 	var istWeatherCurrent : Bool = true
 	
