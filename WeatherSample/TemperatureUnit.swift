@@ -9,7 +9,7 @@
 import Foundation
 
 enum TemperatureUnit : Int {
-	case K = 0, F, C
+	case F = 0, K, C
 	
 	func unitLiteral() -> String {
 		switch self {

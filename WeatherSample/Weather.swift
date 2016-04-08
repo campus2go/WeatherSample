@@ -13,6 +13,8 @@ protocol Weather {
 	var weatherCondition : WeatherCondition? {get}
 	
 	var temperature : Float? {get}
+    
+    var unit: TemperatureUnit? {get}
 
 	var weatherConditionDescription : String? {get}
 	

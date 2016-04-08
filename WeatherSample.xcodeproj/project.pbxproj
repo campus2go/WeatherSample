@@ -48,6 +48,9 @@
 		46A970F51CB5477A0037C0D9 /* settings@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46A970D81CB5477A0037C0D9 /* settings@3x.png */; };
 		F40DF4181CB7BC340019BD98 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DF4171CB7BC340019BD98 /* SettingsViewController.swift */; };
 		F40DF41F1CB7E1280019BD98 /* SimpleWeatherIconProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DF41E1CB7E1280019BD98 /* SimpleWeatherIconProvider.swift */; };
+		F40DF4231CB7E7BE0019BD98 /* OnlineWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DF4211CB7E7BE0019BD98 /* OnlineWeather.swift */; };
+		F40DF4241CB7E7BE0019BD98 /* OnlineWeatherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DF4221CB7E7BE0019BD98 /* OnlineWeatherProvider.swift */; };
+		F40DF4261CB7EE660019BD98 /* WeatherCodeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DF4251CB7EE650019BD98 /* WeatherCodeMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,9 @@
 		46A970D81CB5477A0037C0D9 /* settings@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@3x.png"; sourceTree = "<group>"; };
 		F40DF4171CB7BC340019BD98 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F40DF41E1CB7E1280019BD98 /* SimpleWeatherIconProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleWeatherIconProvider.swift; sourceTree = "<group>"; };
+		F40DF4211CB7E7BE0019BD98 /* OnlineWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineWeather.swift; sourceTree = "<group>"; };
+		F40DF4221CB7E7BE0019BD98 /* OnlineWeatherProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineWeatherProvider.swift; sourceTree = "<group>"; };
+		F40DF4251CB7EE650019BD98 /* WeatherCodeMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCodeMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +171,7 @@
 		46A970761CB5439F0037C0D9 /* WeatherSample */ = {
 			isa = PBXGroup;
 			children = (
+				F40DF4201CB7E7660019BD98 /* OnlineWeather */,
 				46A970BD1CB5477A0037C0D9 /* icons */,
 				46A970AE1CB5470C0037C0D9 /* Temparatures */,
 				46A970AD1CB546F20037C0D9 /* WeatherInterfaces */,
@@ -257,6 +264,16 @@
 				46A970D81CB5477A0037C0D9 /* settings@3x.png */,
 			);
 			path = icons;
+			sourceTree = "<group>";
+		};
+		F40DF4201CB7E7660019BD98 /* OnlineWeather */ = {
+			isa = PBXGroup;
+			children = (
+				F40DF4211CB7E7BE0019BD98 /* OnlineWeather.swift */,
+				F40DF4221CB7E7BE0019BD98 /* OnlineWeatherProvider.swift */,
+				F40DF4251CB7EE650019BD98 /* WeatherCodeMapper.swift */,
+			);
+			name = OnlineWeather;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,8 +432,10 @@
 				46A970BB1CB547650037C0D9 /* TemperatureConverter.swift in Sources */,
 				46A970B61CB547320037C0D9 /* WeatherIconProvider.swift in Sources */,
 				F40DF41F1CB7E1280019BD98 /* SimpleWeatherIconProvider.swift in Sources */,
+				F40DF4231CB7E7BE0019BD98 /* OnlineWeather.swift in Sources */,
 				46A970B81CB547320037C0D9 /* WeatherReceiver.swift in Sources */,
 				46A9707A1CB5439F0037C0D9 /* MainViewController.swift in Sources */,
+				F40DF4241CB7E7BE0019BD98 /* OnlineWeatherProvider.swift in Sources */,
 				46A970AB1CB546E10037C0D9 /* DummyWeatherIconProvider.swift in Sources */,
 				46A970781CB5439F0037C0D9 /* AppDelegate.swift in Sources */,
 				46A970BC1CB547650037C0D9 /* TemperatureUnit.swift in Sources */,
@@ -426,6 +445,7 @@
 				F40DF4181CB7BC340019BD98 /* SettingsViewController.swift in Sources */,
 				46A970AA1CB546E10037C0D9 /* DummyWeather.swift in Sources */,
 				46A970B51CB547320037C0D9 /* WeatherCondition.swift in Sources */,
+				F40DF4261CB7EE660019BD98 /* WeatherCodeMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

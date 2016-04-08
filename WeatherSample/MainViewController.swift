@@ -17,8 +17,8 @@ class MainViewController: UIViewController, WeatherReceiver {
     @IBOutlet var buttonSettings: UIButton?
     
     //Provider + Objekte
-    let weatherProvider: WeatherProvider = DummyWeatherProvider()
-    let iconProvider: WeatherIconProvider = DummyWeatherIconProvider()
+    let weatherProvider: WeatherProvider = OnlineWeatherProvider()
+    let iconProvider: WeatherIconProvider = SimpleWeatherIconProvider()
     var weather: Weather?
 
     override func viewDidLoad() {
@@ -41,10 +41,32 @@ class MainViewController: UIViewController, WeatherReceiver {
     
     func updateWeather(weather: Weather) {
         self.weather = weather
-        labelTemperatur?.text = "\(weather.temperature!) °C"
+        
         labelTown?.text = weather.placeName
         
-        imageWeather?.image = iconProvider.iconForCondition(weather.weatherCondition!)
+        if let condition = weather.weatherCondition {
+            imageWeather?.image = iconProvider.iconForCondition(condition)
+        }
+        
+        //print (currentUnitAsInt)
+        var convertedTemp: Float
+        
+        switch weather.unit! {
+            
+        case .F:
+            convertedTemp = TemperatureConverter.f2Current( weather.temperature!)
+        case .C:
+            convertedTemp = TemperatureConverter.c2Current( weather.temperature!)
+        case .K:
+            convertedTemp = TemperatureConverter.k2Current( weather.temperature!)
+            
+            
+        }
+        
+        
+        labelTemperatur?.text = "\(convertedTemp) \(TemperatureConverter.currentUnit.unitLiteral())"
+        
+        
     }
 
 

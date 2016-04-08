@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    let unitKey: String = "TemperaturUnit"
+    // let unitKey: String = "TemperaturUnit"
     let preferences = NSUserDefaults.standardUserDefaults()
     
     @IBOutlet var segmentControl: UISegmentedControl?
@@ -19,9 +19,7 @@ class SettingsViewController: UIViewController {
         
         let unitSelected = segmentControl?.selectedSegmentIndex
         
-        preferences.setInteger(unitSelected!, forKey: unitKey)
-        
-        
+        TemperatureConverter.currentUnit = TemperatureUnit(rawValue:  unitSelected!)!
         
         self.dismissViewControllerAnimated(true, completion: nil)
    
@@ -30,8 +28,9 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let setSegmentToIndex = preferences.integerForKey(unitKey)
+        let setSegmentToIndex = preferences.integerForKey(TemperatureConverter.unitKey)
         segmentControl?.selectedSegmentIndex = setSegmentToIndex
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -13,6 +13,8 @@ class DummyWeather : Weather {
 	var weatherCondition : WeatherCondition? = .Sun
 	
 	var temperature : Float? = 22.0
+    
+    var unit : TemperatureUnit? = TemperatureUnit.C
 	
 	var weatherConditionDescription : String? = "sonnig"
 	
