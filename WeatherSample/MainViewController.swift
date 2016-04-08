@@ -8,17 +8,24 @@
 
 import UIKit
 
-class ViewController: UIViewController, WeatherReceiver {
+class MainViewController: UIViewController, WeatherReceiver {
     
+    //View Elemente
     @IBOutlet var labelTemperatur: UILabel?
     @IBOutlet var labelTown: UILabel?
+    @IBOutlet var imageWeather: UIImageView?
+    @IBOutlet var buttonSettings: UIButton?
+    
+    //Provider + Objekte
     let weatherProvider: DummyWeatherProvider = DummyWeatherProvider()
+    let iconProvider: DummyWeatherIconProvider = DummyWeatherIconProvider()
     var weather: Weather?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         weatherProvider.requestWeather(self)
+        
         labelTemperatur?.text = "\(labelTemperatur!.text!):"
     }
 
@@ -31,6 +38,8 @@ class ViewController: UIViewController, WeatherReceiver {
         self.weather = weather
         labelTemperatur?.text = "\(weather.temperature!) °C"
         labelTown?.text = weather.placeName
+        
+        imageWeather?.image = iconProvider.iconForCondition(weather.weatherCondition!)
     }
 
 

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		46A970781CB5439F0037C0D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A970771CB5439F0037C0D9 /* AppDelegate.swift */; };
-		46A9707A1CB5439F0037C0D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A970791CB5439F0037C0D9 /* ViewController.swift */; };
+		46A9707A1CB5439F0037C0D9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A970791CB5439F0037C0D9 /* MainViewController.swift */; };
 		46A9707D1CB5439F0037C0D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A9707B1CB5439F0037C0D9 /* Main.storyboard */; };
 		46A9707F1CB5439F0037C0D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A9707E1CB5439F0037C0D9 /* Assets.xcassets */; };
 		46A970821CB5439F0037C0D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A970801CB5439F0037C0D9 /* LaunchScreen.storyboard */; };
@@ -46,6 +46,7 @@
 		46A970F31CB5477A0037C0D9 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 46A970D61CB5477A0037C0D9 /* settings.png */; };
 		46A970F41CB5477A0037C0D9 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46A970D71CB5477A0037C0D9 /* settings@2x.png */; };
 		46A970F51CB5477A0037C0D9 /* settings@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46A970D81CB5477A0037C0D9 /* settings@3x.png */; };
+		F40DF4181CB7BC340019BD98 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DF4171CB7BC340019BD98 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +69,7 @@
 /* Begin PBXFileReference section */
 		46A970741CB5439F0037C0D9 /* WeatherSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A970771CB5439F0037C0D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		46A970791CB5439F0037C0D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		46A970791CB5439F0037C0D9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		46A9707C1CB5439F0037C0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46A9707E1CB5439F0037C0D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46A970811CB5439F0037C0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 		46A970D61CB5477A0037C0D9 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		46A970D71CB5477A0037C0D9 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		46A970D81CB5477A0037C0D9 /* settings@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@3x.png"; sourceTree = "<group>"; };
+		F40DF4171CB7BC340019BD98 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,11 +168,12 @@
 				46A970AD1CB546F20037C0D9 /* WeatherInterfaces */,
 				46A970A61CB546B00037C0D9 /* DummyWeatherProvider */,
 				46A970771CB5439F0037C0D9 /* AppDelegate.swift */,
-				46A970791CB5439F0037C0D9 /* ViewController.swift */,
+				46A970791CB5439F0037C0D9 /* MainViewController.swift */,
 				46A9707B1CB5439F0037C0D9 /* Main.storyboard */,
 				46A9707E1CB5439F0037C0D9 /* Assets.xcassets */,
 				46A970801CB5439F0037C0D9 /* LaunchScreen.storyboard */,
 				46A970831CB5439F0037C0D9 /* Info.plist */,
+				F40DF4171CB7BC340019BD98 /* SettingsViewController.swift */,
 			);
 			path = WeatherSample;
 			sourceTree = "<group>";
@@ -409,13 +412,14 @@
 				46A970BB1CB547650037C0D9 /* TemperatureConverter.swift in Sources */,
 				46A970B61CB547320037C0D9 /* WeatherIconProvider.swift in Sources */,
 				46A970B81CB547320037C0D9 /* WeatherReceiver.swift in Sources */,
-				46A9707A1CB5439F0037C0D9 /* ViewController.swift in Sources */,
+				46A9707A1CB5439F0037C0D9 /* MainViewController.swift in Sources */,
 				46A970AB1CB546E10037C0D9 /* DummyWeatherIconProvider.swift in Sources */,
 				46A970781CB5439F0037C0D9 /* AppDelegate.swift in Sources */,
 				46A970BC1CB547650037C0D9 /* TemperatureUnit.swift in Sources */,
 				46A970B71CB547320037C0D9 /* WeatherProvider.swift in Sources */,
 				46A970AC1CB546E10037C0D9 /* DummyWeatherProvider.swift in Sources */,
 				46A970B41CB547320037C0D9 /* Weather.swift in Sources */,
+				F40DF4181CB7BC340019BD98 /* SettingsViewController.swift in Sources */,
 				46A970AA1CB546E10037C0D9 /* DummyWeather.swift in Sources */,
 				46A970B51CB547320037C0D9 /* WeatherCondition.swift in Sources */,
 			);
@@ -644,6 +648,7 @@
 				46A9709E1CB543A00037C0D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46A9709F1CB543A00037C0D9 /* Build configuration list for PBXNativeTarget "WeatherSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -652,6 +657,7 @@
 				46A970A11CB543A00037C0D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46A970A21CB543A00037C0D9 /* Build configuration list for PBXNativeTarget "WeatherSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -660,6 +666,7 @@
 				46A970A41CB543A00037C0D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

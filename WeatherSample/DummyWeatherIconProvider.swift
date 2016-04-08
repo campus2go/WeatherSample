@@ -13,6 +13,6 @@ import UIKit
 class DummyWeatherIconProvider : WeatherIconProvider {
 	
 	func iconForCondition (condition : WeatherCondition) -> UIImage? {
-		return UIImage(contentsOfFile: "ic_weather_02d.png");
+		return UIImage(named: "ic_weather_02d.png")
 	}
 }

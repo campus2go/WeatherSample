@@ -9,6 +9,10 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+    @IBAction func unitChanged(){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
