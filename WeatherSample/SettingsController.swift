@@ -14,6 +14,8 @@ class SettingsController: UIViewController {
     @IBOutlet var plz : UITextField?
     @IBOutlet var btnOk : UIButton?
     
+
+    
     
     @IBAction func pressOk(sender: UIButton){
         PlzStorage.currentPlz = (plz?.text)!
@@ -42,6 +44,8 @@ class SettingsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
         
     }
     

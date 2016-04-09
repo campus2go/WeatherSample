@@ -18,8 +18,13 @@ class wetterapi :  NSObject, NSXMLParserDelegate{
     
     
     //2. API ansprechen
-    //var url_x = "http://www.wetter-api.de/wetter-0a09c8844ba8f0936c20bd791130d6b6-"+plz+".xml"
-    var url = "http://www.wetter-api.de/wetter-ihr-api-key-35759.xml"
+    var url : String? {
+        return "http://www.wetter-api.de/wetter-0a09c8844ba8f0936c20bd791130d6b6-"+plz+".xml"
+    }
+    
+    
+    
+    //var url = "http://www.wetter-api.de/wetter-ihr-api-key-35759.xml"
     
     var parser = NSXMLParser()
     var posts = NSMutableArray()
@@ -28,11 +33,16 @@ class wetterapi :  NSObject, NSXMLParserDelegate{
     var myort = NSMutableString()
     var temperatur = NSMutableString()
     
+    func urlGenerator(_plz: String) {
+        plz = _plz
+        
+    }
     
-    func beginParsing()
+    
+    func beginParsing() -> ()
     {
         posts = []
-        parser = NSXMLParser(contentsOfURL:(NSURL(string: url))!)!
+        parser = NSXMLParser(contentsOfURL:(NSURL(string: url!))!)!
         parser.delegate = self
         parser.parse()
       //  tbData!.reloadData()
@@ -52,7 +62,7 @@ class wetterapi :  NSObject, NSXMLParserDelegate{
         }
     }
     
-    func parser(parser: NSXMLParser!, foundCharacters string: String!)
+    func parser(parser: NSXMLParser, foundCharacters string: String)
     {
         //print(string)
         if element.isEqualToString("ort") {
@@ -63,7 +73,7 @@ class wetterapi :  NSObject, NSXMLParserDelegate{
         }
     }
     
-    func parser(parser: NSXMLParser!, didEndElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!)
+    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?)
     {
         if (elementName as NSString).isEqualToString("item") {
             if !myort.isEqual(nil) {

@@ -52,6 +52,7 @@
 		B341348D1CB7E929003A2329 /* RealWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B341348C1CB7E929003A2329 /* RealWeather.swift */; };
 		B34134901CB7EEA8003A2329 /* PlzStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B341348F1CB7EEA8003A2329 /* PlzStorage.swift */; };
 		B34134921CB7FABD003A2329 /* RealWeatherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34134911CB7FABD003A2329 /* RealWeatherProvider.swift */; };
+		B366CDCE1CB9118900C783F3 /* Locator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B366CDCD1CB9118900C783F3 /* Locator.swift */; };
 		B3C6FFC61CB55CC1004ADF41 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C6FFC51CB55CC1004ADF41 /* SettingsController.swift */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +125,7 @@
 		B341348C1CB7E929003A2329 /* RealWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealWeather.swift; sourceTree = "<group>"; };
 		B341348F1CB7EEA8003A2329 /* PlzStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlzStorage.swift; sourceTree = "<group>"; };
 		B34134911CB7FABD003A2329 /* RealWeatherProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealWeatherProvider.swift; sourceTree = "<group>"; };
+		B366CDCD1CB9118900C783F3 /* Locator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locator.swift; sourceTree = "<group>"; };
 		B3C6FFC51CB55CC1004ADF41 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +177,7 @@
 		46A970761CB5439F0037C0D9 /* WeatherSample */ = {
 			isa = PBXGroup;
 			children = (
+				B366CDCC1CB9117900C783F3 /* geoLocator */,
 				B34134871CB7DC4D003A2329 /* weather-api */,
 				46A970BD1CB5477A0037C0D9 /* icons */,
 				46A970AE1CB5470C0037C0D9 /* Temparatures */,
@@ -289,6 +292,14 @@
 			);
 			name = RealWeatherProvider;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		B366CDCC1CB9117900C783F3 /* geoLocator */ = {
+			isa = PBXGroup;
+			children = (
+				B366CDCD1CB9118900C783F3 /* Locator.swift */,
+			);
+			name = geoLocator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,6 +471,7 @@
 				46A970AC1CB546E10037C0D9 /* DummyWeatherProvider.swift in Sources */,
 				46A970B41CB547320037C0D9 /* Weather.swift in Sources */,
 				B341348D1CB7E929003A2329 /* RealWeather.swift in Sources */,
+				B366CDCE1CB9118900C783F3 /* Locator.swift in Sources */,
 				46A970AA1CB546E10037C0D9 /* DummyWeather.swift in Sources */,
 				46A970B51CB547320037C0D9 /* WeatherCondition.swift in Sources */,
 				B34134891CB7DC71003A2329 /* wetterapi.swift in Sources */,

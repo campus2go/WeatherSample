@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0Zj-DU-TwE">
-                                <rect key="frame" x="20" y="271" width="560" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0Zj-DU-TwE">
+                                <rect key="frame" x="30" y="30" width="540" height="341"/>
                                 <segments>
                                     <segment title="K"/>
                                     <segment title="F"/>
@@ -29,23 +29,33 @@
                                     <action selector="doOnChange:" destination="nGw-Do-njl" eventType="valueChanged" id="xzy-mv-gbA"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XPJ-Hc-fxu">
-                                <rect key="frame" x="20" y="366" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="73342" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="XPJ-Hc-fxu">
+                                <rect key="frame" x="30" y="385" width="421" height="149"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfM-bB-X62">
-                                <rect key="frame" x="134" y="366" width="30" height="30"/>
-                                <state key="normal" title="OK!"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfM-bB-X62">
+                                <rect key="frame" x="454" y="385" width="116" height="149"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="109"/>
+                                <state key="normal" title="🔎">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="pressOk:" destination="nGw-Do-njl" eventType="touchUpInside" id="Rvl-oH-icG"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.84445476130398567" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="0Zj-DU-TwE" firstAttribute="leading" secondItem="uQn-9Q-Shb" secondAttribute="leadingMargin" id="1J7-Tv-ddP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0Zj-DU-TwE" secondAttribute="trailing" id="jJJ-Ls-VJ8"/>
+                            <constraint firstItem="XPJ-Hc-fxu" firstAttribute="centerX" secondItem="uQn-9Q-Shb" secondAttribute="centerX" constant="-59.5" id="2rP-G2-jrC"/>
+                            <constraint firstItem="0Zj-DU-TwE" firstAttribute="centerX" secondItem="uQn-9Q-Shb" secondAttribute="centerX" id="HKf-Du-1b0"/>
+                            <constraint firstItem="0Zj-DU-TwE" firstAttribute="leading" secondItem="uQn-9Q-Shb" secondAttribute="leadingMargin" constant="10" id="Nan-BH-ZzM"/>
+                            <constraint firstItem="WfM-bB-X62" firstAttribute="leading" secondItem="XPJ-Hc-fxu" secondAttribute="trailing" constant="3" id="OdM-VV-30a"/>
+                            <constraint firstItem="0Zj-DU-TwE" firstAttribute="top" secondItem="LGt-Gi-YZM" secondAttribute="bottom" constant="10" id="mZP-rx-DUp"/>
+                            <constraint firstItem="GsK-6c-Kuf" firstAttribute="top" secondItem="XPJ-Hc-fxu" secondAttribute="bottom" constant="17" id="puN-VD-ZB8"/>
+                            <constraint firstItem="WfM-bB-X62" firstAttribute="centerY" secondItem="XPJ-Hc-fxu" secondAttribute="centerY" id="qBA-o1-PYS"/>
+                            <constraint firstItem="WfM-bB-X62" firstAttribute="top" secondItem="0Zj-DU-TwE" secondAttribute="bottom" constant="15" id="r3j-jd-LGk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Zj-DU-TwE" secondAttribute="trailing" constant="10" id="vhU-t0-3YO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="zahnrad.png" id="rRt-24-dZN" userLabel="Settings"/>
