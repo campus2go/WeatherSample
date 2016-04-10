@@ -53,6 +53,7 @@
 		B34134901CB7EEA8003A2329 /* PlzStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B341348F1CB7EEA8003A2329 /* PlzStorage.swift */; };
 		B34134921CB7FABD003A2329 /* RealWeatherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34134911CB7FABD003A2329 /* RealWeatherProvider.swift */; };
 		B366CDCE1CB9118900C783F3 /* Locator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B366CDCD1CB9118900C783F3 /* Locator.swift */; };
+		B366CDD01CBA7AB900C783F3 /* RealWeatherIconProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B366CDCF1CBA7AB900C783F3 /* RealWeatherIconProvider.swift */; };
 		B3C6FFC61CB55CC1004ADF41 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C6FFC51CB55CC1004ADF41 /* SettingsController.swift */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,7 @@
 		B341348F1CB7EEA8003A2329 /* PlzStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlzStorage.swift; sourceTree = "<group>"; };
 		B34134911CB7FABD003A2329 /* RealWeatherProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealWeatherProvider.swift; sourceTree = "<group>"; };
 		B366CDCD1CB9118900C783F3 /* Locator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locator.swift; sourceTree = "<group>"; };
+		B366CDCF1CBA7AB900C783F3 /* RealWeatherIconProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealWeatherIconProvider.swift; sourceTree = "<group>"; };
 		B3C6FFC51CB55CC1004ADF41 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -289,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				B34134911CB7FABD003A2329 /* RealWeatherProvider.swift */,
+				B366CDCF1CBA7AB900C783F3 /* RealWeatherIconProvider.swift */,
 			);
 			name = RealWeatherProvider;
 			path = ..;
@@ -461,6 +464,7 @@
 				46A970BB1CB547650037C0D9 /* TemperatureConverter.swift in Sources */,
 				B3C6FFC61CB55CC1004ADF41 /* SettingsController.swift in Sources */,
 				46A970B61CB547320037C0D9 /* WeatherIconProvider.swift in Sources */,
+				B366CDD01CBA7AB900C783F3 /* RealWeatherIconProvider.swift in Sources */,
 				46A970B81CB547320037C0D9 /* WeatherReceiver.swift in Sources */,
 				46A9707A1CB5439F0037C0D9 /* ViewController.swift in Sources */,
 				46A970AB1CB546E10037C0D9 /* DummyWeatherIconProvider.swift in Sources */,

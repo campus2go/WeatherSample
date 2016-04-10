@@ -18,4 +18,8 @@ class RealWeather : Weather {
     
     var placeName : String? = "Reutlingen"
     
+    //optional wenn verfügbar
+    //var icon_url : String? = ""
+    
+    
 }

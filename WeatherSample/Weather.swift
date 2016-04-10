@@ -17,5 +17,8 @@ protocol Weather {
 	var weatherConditionDescription : String? {get}
 	
 	var placeName : String? {get}
+    
+    //optional wenn verfügbar
+    //var icon_url : String? {get}
 	
 }

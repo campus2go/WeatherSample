@@ -17,6 +17,8 @@ class DummyWeather : Weather {
 	var weatherConditionDescription : String? = "sonnig"
 	
 	var placeName : String? = "Reutlingen"
+    
+    var icon_url : String? = ""
 
 }
 

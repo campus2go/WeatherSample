@@ -32,6 +32,9 @@ class wetterapi :  NSObject, NSXMLParserDelegate{
     var element = NSString()
     var myort = NSMutableString()
     var temperatur = NSMutableString()
+    var weatherConditionDescription = NSMutableString()
+    var weatherCondition = NSMutableString()
+   
     
     func urlGenerator(_plz: String) {
         plz = _plz
@@ -67,9 +70,14 @@ class wetterapi :  NSObject, NSXMLParserDelegate{
         //print(string)
         if element.isEqualToString("ort") {
             myort.appendString(string)
-            print(element)
+            
         } else if element.isEqualToString("temperatur") {
             temperatur.appendString(string)
+        }else if element.isEqualToString("warnungvor"){
+            weatherConditionDescription.appendString(string)
+        }else if  element.isEqualToString("icon"){
+            
+            weatherCondition.appendString(string)
         }
     }
     
@@ -82,9 +90,17 @@ class wetterapi :  NSObject, NSXMLParserDelegate{
             if !temperatur.isEqual(nil) {
                 elements.setObject(temperatur, forKey: "temperatur")
             }
+            if !weatherConditionDescription.isEqual(nil) {
+                elements.setObject(weatherConditionDescription, forKey: "warnungvor")
+            }
+            if !weatherCondition.isEqual(nil) {
+                elements.setObject(weatherCondition, forKey: "icon")
+            }
             posts.addObject(elements)
         }
     }
+    
+ 
     
   
     func getWeather() -> (Weather){
@@ -98,13 +114,43 @@ class wetterapi :  NSObject, NSXMLParserDelegate{
         weatherObj.placeName = String(myort)
         //tempartur kann nicht kovertiert werden
         weatherObj.temperature = temperatur.floatValue
+        weatherObj.weatherConditionDescription = String(weatherConditionDescription)
+        
+        
+        
+        
+        
+        //ToDo: String besteht noch aus mehreren Werten, es uss der erste Wert geholt werden!
+        switch(weatherCondition){
+            case "chanceflurries": weatherObj.weatherCondition = WeatherCondition.Rain
+            case "chancerain":      weatherObj.weatherCondition = WeatherCondition.Rain
+            case "chancesleet":     weatherObj.weatherCondition = WeatherCondition.Rain
+            case "chancesnow":      weatherObj.weatherCondition = WeatherCondition.Snow
+            case "chancetstorms":   weatherObj.weatherCondition = WeatherCondition.HeavyClouds
+            case "clear":           weatherObj.weatherCondition = WeatherCondition.Sun
+            case "cloudy":          weatherObj.weatherCondition = WeatherCondition.Clouds
+            case "flurries":        weatherObj.weatherCondition = WeatherCondition.Rain
+            case "flog":            weatherObj.weatherCondition = WeatherCondition.Fog
+            case "hazy":            weatherObj.weatherCondition = WeatherCondition.HeavyClouds
+            case "partlycloudy":    weatherObj.weatherCondition = WeatherCondition.Clouds
+            case "mostlycloudy":    weatherObj.weatherCondition = WeatherCondition.Clouds
+            case "mostlysunny":     weatherObj.weatherCondition = WeatherCondition.Sun
+            case "partlysunny":     weatherObj.weatherCondition = WeatherCondition.PartlyCloudy
+            case "sleet":           weatherObj.weatherCondition = WeatherCondition.Rain
+            case "rain":            weatherObj.weatherCondition = WeatherCondition.Rain
+            case "snow":            weatherObj.weatherCondition = WeatherCondition.Snow
+            case "sunny":           weatherObj.weatherCondition = WeatherCondition.Sun
+            case "tstorms":         weatherObj.weatherCondition = WeatherCondition.Thunderstorm
+            case "cloudy":          weatherObj.weatherCondition = WeatherCondition.Clouds
+        default: weatherObj.weatherCondition = WeatherCondition.Fog
+        }
+        
         
             
             
        
             
-        print(weatherObj.placeName)
-        print(weatherObj.temperature)
+        
         
         return weatherObj
     }

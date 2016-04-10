@@ -32,7 +32,7 @@ class ViewController: UIViewController, WeatherReceiver {
         super.viewDidLoad()
         
         myWeatherProvider = RealWeatherProvider()
-        myWeatherIconProvider = DummyWeatherIconProvider()
+        myWeatherIconProvider = RealWeatherIconProvider()
         
         
     }
@@ -85,8 +85,10 @@ class ViewController: UIViewController, WeatherReceiver {
     
     func editImage(){
         if let w = weather {
+            print(w.weatherCondition)
         imageView?.image =  myWeatherIconProvider!.iconForCondition((w.weatherCondition)!)
         }
+        
     }
     
 }
