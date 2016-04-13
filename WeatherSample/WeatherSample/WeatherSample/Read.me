@@ -1,0 +1,51 @@
+Dieses Projekt dient als Musterlösung (in Teilen als Starthilfe) zur Enwicklung einer App im Rahmen einer Schulung.
+
+Dabei wird geübt
+- Navigation über modale Präsentationen
+- Kommunikation mit dem Anwender über Aus- und Eingabelemente
+- Erste grundlegende Erfahrung beim Einsatz von Constraints
+- Asynchrone Kommunikation mit einem Web-Service
+- Umgang mit einer Karte
+- Umgang mit den Location Services
+- Umgang mit Schnitstellen (Interfaces bzw. Protcols in Swift)
+
+Aufbau der Musterlösung
+Im Training wird die Lösung in zwei schritten erarbeitet. Daher ist die Gruppenstruktur ebenfalls in zwei Schritte gegliedert. Es ist nicht notwendig, das auch das Übungsprojekt der lernenden entsprechend gegliedert ist. Hier in diesem Projekt dient diese Aufteilung lediglich der Übersichtlichkeit während gemeinsam an Schrit 1 gearbeitet wird.
+
+Vorbereitung
+
+Das projekt beginnt mit einem leeren Projekt und einer Sammlung von Artefakten, die den Teilnehmern eine übliche Projektstruktur und Architektur vorgeben. Dabei werden einige Schnittstellen (Protcol) vorgegeben. Die Schnittstellen erleichtern nicht nur den Einstieg in das Projekt und das Schrittweise Erarbeiten. Sie ermöglichen auch in Teams gemeinsam zu arbeiten, indem ein Teil an der UI arbeitet und ein anderer and den Datenlieferanten (Provider-Klassen). Die sorgen für eine entkoppelte Kommunikation zwischen den Providern und den Konsumenten (in der Regel View Controller), so dass bei Gruppenarbeit in der Klasse am Ende einer Übung die jeweils besten Lösungen in ein gemeinsames Projekt zusammengeführt werden können. Auf diese Weise üben wir uns nicht nur darin, gutes OOP zu entwickeln (Entkopplung), sondern auch darin, in größeren Teams gemeinsam möglichst reibungslos an einem Projekt zu arbeiten.
+
+Einige grafische Artefakte werden zur Verfügung gestellt, damit die Teilnehmer darauf keine Zeit verlieren, darunter Icons zur Darstellung des Wetters.
+
+Zur korrekten Umrechnung der Einheiten (s.u.) wird eine Utility-Klasse bereitgestellt, damit die Teilnehmer auch darauf keine Zeit verlieren, denn die Umrechnung von Termperaturen ist nicht Gegenstand des Trainings. Gleichzeitig bietet diese Klasse TemperatureConverter Methoden, um die vom benutzer gewählte aktuelle Einheit in den User Defaults zu persistieren. Das soll die Teilnehmer davon abhalten, verführt zu werden, im View Controller Business-Logik bzw. Daten-Persistierung zu implementieren. Ebenfalls wird ein Enum TemperatureUnit bereit gestellt, das von den Protokollen und der Utility-Klasse bereits verwendet wird. Die Teilnehmer sollen ausschließlich dieses Enum dazu verwenden.
+
+Eine Dummy-Implementierung (bzw. Stub) der Interfaces soll den Teilnehmern dabei helfen, sich im allerersten Schritt auf die Entwicklung einer UI zu konzentrieren. Die UI kann dabei die Daten bereits aus einem Objekt beziehen, das als Wetterdatenprovider das entsprechende Protokoll bedient. An die Stelle des Dummys kommt später der Wetterdatenprovider, den die Teilnehmer selbst entwickeln. Für die spätere Testbarkeit des Projektes wird empfholen, die Dummys unverändert zu belassen.
+
+
+Schritt 1a
+
+In diesem ersten Schritt sollen sich die Teilnehmer im Projekt orientieren. Die Klasse ViewController und das AppDelegate aus dem Startpaket sind in dem Zustand, in dem XCode sie generiert, wenn ein neues Projekt mit dem Template für einseitige Apps erstellt wird. Dabei ist der ViewController auch der RootViewController und wird nach Start der App zunächst völlig leer angezeigt. In der Musterlösung hat der RootViewController einen etwas sprechenderen Namen.
+Aufgabe der Teilnehmer ist zunächst, für den ViewController eine UI zu entwickeln und darin per Icon die aktuelle Wetterkondition anzuziegen, die Temperatur und den Ort, an dem dieses Wetter herrscht. Mittels Constraints ist die UI so zu gestalten, dass auf allen möglichen Geräten und Orientierungen sämtliche UI-Elemente vollständig angezeigt werden.
+Es gibt keine weiteren Vorgaben zur Gestaltung der UI.
+
+Die Wetterdaten sind zu beziehen über ein Objekt, dass per deklaration das Protokoll WeatherProvider erfüllt. Konkret implementiert werden kann zunächst die entsprechende Dummy-Klasse.
+
+
+Schritt 1b
+
+Als nächstes soll zunächst im Storyboard eine weitere UI entworfen werden, welche es dem Anwender ermöglicht, die Einheit auszuwählen, in der die Temperatur angezeigt werden soll. Es wird empfohlen, die neue View modal zu präsentieren. Das entspräche der Musterlösung. Andere Navigationen wie via NavigationController, TabBars oder als Popover sind ebenfalls möglich, insbesondere dann, wenn die Teilnehmer sich ausserhalb der Übungszeiten mit der Navigation in Apps beschäftigen möchten oder wenn während der Übungszeiten noch Zeit übrig ist und die eigentliche Aufgabe bereits erfüllt ist.
+
+Nachdem der Anwender eine andere Einheit ausgewählt hat, soll unmittelbar die Temperatur in dieser Einheit angezeigt werden. Dabei ist die Klasse TemperaturConverter stärker behilflich, als das den Teilnehmern anfangs erfahrungsgemäß bewusst ist. Es kann hilfreich sein, die UIViewController Methode viewWillAppear zu überschreiben.
+
+
+Schritt 2
+
+Als Teilnehmer stellen Sie sich bitte vor, der Schritt 2 würde einen längeren Zeitraum nach Schritt 1 implementiert werden. Ggf. sei eine App mit der Funktionalität aus Schritt 1 bereits im Markt. Dann würde man zur weiteren Entwicklung einer vorhandenen Applikation ggf. das Open-Close-Prinzip anwenden. D.h. dass die bestehenden Schnittstellen zwar erwetiert werden dürften, aber weder die Schnittstelle noch ihre Implementierung so verändert werden darf, dass andere Kommunikationspartner (also Anwender der Schnittstelle) in Folge der Veränderung nicht mehr korrekt funktionieren würden. (Kurzform von OCP aus praktischer Sicht)
+Um das zu gewährleisten und zu verdeutlichen wird für Schritt zwei ein weiterer Satz Protokolle (und Dummy-Implementierungen) bereitgestellt, bei denen die Protokolle von den vorhandenen aus Schritt 1 erben. Analog dazu erben auch die Dummy-Klassen. Es wäre allerdings nicht notwendig, das über Vererbung zu realisieren. Die bestehenden Klassen und Protokolle könnten durchaus auch erweitert werden.
+Damit die oben bereits erwähnte Austauschbarkeit einzelner Komponenten erreicht werden kann, die von verschiedenen Teilnehmern oder Teams entwickelt werden, wird empfohlen, im Rahmen der Übungen die Vererbung beizubehalten. Ausserdem stellt die Vererbarkeit von Protokollen eine besondere Eigenschaft von Swift dar.
+
+Aufgabe in Schritt 2 ist es, das Wetter mehrerer Orte in einer Karte darzustellen. Dabei ist des den Teilnehmern fregestellt, ob der Kartenausschnitt fest vorgegeben wird, der Anwender selbst scrollen und zoomen kann oder ob die Karte dem jeweiligen Ort des Anwenders folgt. In der Musterlösung ist der erste Ausschnitt um die Lokation des Anwenders herum. Falls der Anwender sich bewegt folgt die Karte nicht dem jeweiligen Ort sondern gestattet es dem Anwender, darin zu zoomen und zu scrollen. Entsprechend soll eine Erweiterung oder Spezialisierung (Unterklasse) des Wetterdatenproviders das Wetter für mehrere Orte eines Kartenausschnites (bounding box) liefern können.
+
+Informationen zu Wetterdiensten, die ihre Dienste ganz oder teilweise bzw. eingeschränkt kostenlos zur Verfügung stellen, finden Sie hier:
+http://klecker-apps.de/index.php/de/wetter-apis
