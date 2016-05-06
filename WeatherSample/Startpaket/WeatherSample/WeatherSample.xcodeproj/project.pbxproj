@@ -46,6 +46,9 @@
 		46A970F31CB5477A0037C0D9 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 46A970D61CB5477A0037C0D9 /* settings.png */; };
 		46A970F41CB5477A0037C0D9 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46A970D71CB5477A0037C0D9 /* settings@2x.png */; };
 		46A970F51CB5477A0037C0D9 /* settings@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46A970D81CB5477A0037C0D9 /* settings@3x.png */; };
+		46EF6F4E1CDCF56C0012CBB8 /* LocatedWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF6F4B1CDCF56C0012CBB8 /* LocatedWeather.swift */; };
+		46EF6F4F1CDCF56C0012CBB8 /* MultiWeatherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF6F4C1CDCF56C0012CBB8 /* MultiWeatherProvider.swift */; };
+		46EF6F501CDCF56C0012CBB8 /* MultiWeatherReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF6F4D1CDCF56C0012CBB8 /* MultiWeatherReceiver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +114,9 @@
 		46A970D61CB5477A0037C0D9 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		46A970D71CB5477A0037C0D9 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		46A970D81CB5477A0037C0D9 /* settings@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@3x.png"; sourceTree = "<group>"; };
+		46EF6F4B1CDCF56C0012CBB8 /* LocatedWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocatedWeather.swift; sourceTree = "<group>"; };
+		46EF6F4C1CDCF56C0012CBB8 /* MultiWeatherProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiWeatherProvider.swift; sourceTree = "<group>"; };
+		46EF6F4D1CDCF56C0012CBB8 /* MultiWeatherReceiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiWeatherReceiver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +212,7 @@
 		46A970AD1CB546F20037C0D9 /* WeatherInterfaces */ = {
 			isa = PBXGroup;
 			children = (
+				46EF6F4A1CDCF5140012CBB8 /* WeatherInterfaces Step II */,
 				46A970AF1CB547320037C0D9 /* Weather.swift */,
 				46A970B01CB547320037C0D9 /* WeatherCondition.swift */,
 				46A970B11CB547320037C0D9 /* WeatherIconProvider.swift */,
@@ -251,6 +258,16 @@
 				46A970D81CB5477A0037C0D9 /* settings@3x.png */,
 			);
 			path = icons;
+			sourceTree = "<group>";
+		};
+		46EF6F4A1CDCF5140012CBB8 /* WeatherInterfaces Step II */ = {
+			isa = PBXGroup;
+			children = (
+				46EF6F4B1CDCF56C0012CBB8 /* LocatedWeather.swift */,
+				46EF6F4C1CDCF56C0012CBB8 /* MultiWeatherProvider.swift */,
+				46EF6F4D1CDCF56C0012CBB8 /* MultiWeatherReceiver.swift */,
+			);
+			name = "WeatherInterfaces Step II";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,6 +424,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				46A970BB1CB547650037C0D9 /* TemperatureConverter.swift in Sources */,
+				46EF6F501CDCF56C0012CBB8 /* MultiWeatherReceiver.swift in Sources */,
+				46EF6F4E1CDCF56C0012CBB8 /* LocatedWeather.swift in Sources */,
 				46A970B61CB547320037C0D9 /* WeatherIconProvider.swift in Sources */,
 				46A970B81CB547320037C0D9 /* WeatherReceiver.swift in Sources */,
 				46A9707A1CB5439F0037C0D9 /* ViewController.swift in Sources */,
@@ -414,6 +433,7 @@
 				46A970781CB5439F0037C0D9 /* AppDelegate.swift in Sources */,
 				46A970BC1CB547650037C0D9 /* TemperatureUnit.swift in Sources */,
 				46A970B71CB547320037C0D9 /* WeatherProvider.swift in Sources */,
+				46EF6F4F1CDCF56C0012CBB8 /* MultiWeatherProvider.swift in Sources */,
 				46A970AC1CB546E10037C0D9 /* DummyWeatherProvider.swift in Sources */,
 				46A970B41CB547320037C0D9 /* Weather.swift in Sources */,
 				46A970AA1CB546E10037C0D9 /* DummyWeather.swift in Sources */,
@@ -644,6 +664,7 @@
 				46A9709E1CB543A00037C0D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46A9709F1CB543A00037C0D9 /* Build configuration list for PBXNativeTarget "WeatherSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -652,6 +673,7 @@
 				46A970A11CB543A00037C0D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46A970A21CB543A00037C0D9 /* Build configuration list for PBXNativeTarget "WeatherSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -660,6 +682,7 @@
 				46A970A41CB543A00037C0D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

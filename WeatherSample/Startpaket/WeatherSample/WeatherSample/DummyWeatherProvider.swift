@@ -10,7 +10,6 @@ import Foundation
 
 class DummyWeatherProvider : WeatherProvider {
 	
-	
 	var hasWeather : Bool = true
 	
 	var istWeatherCurrent : Bool = true
